@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dt08ba6ivjm0v"]
+
+[ext_resource type="AudioStream" uid="uid://c26q4g1xelkgv" path="res://sounds/impactMetal_heavy_001.ogg" id="1_8fwyl"]
+[ext_resource type="Script" uid="uid://b6jdkfl2vlsos" path="res://scripts/beat.gd" id="2_pjr04"]
+
+[node name="beat" type="AudioStreamPlayer2D" unique_id=941454151]
+stream = ExtResource("1_8fwyl")
+script = ExtResource("2_pjr04")
+
+[node name="Timer" type="Timer" parent="." unique_id=720841901]

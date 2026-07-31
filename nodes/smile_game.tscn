@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dygfh7v5tpy0k"]
+
+[ext_resource type="Texture2D" uid="uid://c63i0bbaeu40g" path="res://assets/untitled.png" id="1_imv1n"]
+[ext_resource type="Script" uid="uid://2uxdrhjdqxx4" path="res://scripts/smile_game.gd" id="1_sfrxj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b0uw2"]
+radius = 34.0
+
+[node name="smile_game" type="Area2D" unique_id=2019051514]
+script = ExtResource("1_sfrxj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1309886821]
+texture = ExtResource("1_imv1n")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=271280052]
+shape = SubResource("CircleShape2D_b0uw2")
