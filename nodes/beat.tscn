@@ -8,3 +8,4 @@ stream = ExtResource("1_8fwyl")
 script = ExtResource("2_pjr04")
 
 [node name="Timer" type="Timer" parent="." unique_id=720841901]
+one_shot = true
