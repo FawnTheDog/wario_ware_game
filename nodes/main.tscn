@@ -1,8 +1,20 @@
 [gd_scene format=3 uid="uid://dg5p1f4lcj6to"]
 
 [ext_resource type="PackedScene" uid="uid://dygfh7v5tpy0k" path="res://nodes/smile.tscn" id="1_xpfdc"]
+[ext_resource type="Script" uid="uid://mdswcgr62j7h" path="res://scripts/collision_shape_2d.gd" id="2_a3ry3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xpfdc"]
+radius = 1.0
 
 [node name="main" type="Node2D" unique_id=686451725]
 
-[node name="smile_game" parent="." unique_id=2019051514 instance=ExtResource("1_xpfdc")]
-position = Vector2(160, 90)
+[node name="smile" parent="." unique_id=2019051514 instance=ExtResource("1_xpfdc")]
+position = Vector2(45, 25)
+
+[node name="mouse" type="Area2D" parent="." unique_id=290823113]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mouse" unique_id=2063094146]
+shape = SubResource("CircleShape2D_xpfdc")
+script = ExtResource("2_a3ry3")

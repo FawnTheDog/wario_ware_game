@@ -7,6 +7,8 @@
 radius = 34.0
 
 [node name="smile" type="Area2D" unique_id=2019051514]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_sfrxj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1309886821]
@@ -15,3 +17,5 @@ hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=271280052]
 shape = SubResource("CircleShape2D_b0uw2")
+
+[node name="cooldown" type="Timer" parent="." unique_id=1721031710]
