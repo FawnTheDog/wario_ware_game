@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dbap6h4o5ykgk"]
+
+[ext_resource type="Texture2D" uid="uid://cyoty4a8p7yhj" path="res://assets/ugly_stick_guy.png" id="1_2dys8"]
+
+[node name="food_catcher" type="Node2D" unique_id=310336618]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2072795775]
+texture = ExtResource("1_2dys8")

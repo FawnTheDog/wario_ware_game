@@ -15,7 +15,7 @@ func _ready() -> void:
 	position()
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("click") and self.has_overlapping_areas():
 		if sprite.frame == 0:
 			pass
