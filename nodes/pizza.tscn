@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bd7ior2dsa2l0"]
+
+[ext_resource type="Script" uid="uid://cw31qfgjoqmtp" path="res://scripts/pizza.gd" id="1_i1myp"]
+[ext_resource type="Texture2D" uid="uid://y2c8sbaftu02" path="res://assets/pizza.png" id="1_kvucm"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_i1myp"]
+points = PackedVector2Array(16, -11, -16, -11, 1, 15)
+
+[node name="pizza" type="Area2D" unique_id=1467518612]
+collision_layer = 0
+script = ExtResource("1_i1myp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=836046215]
+texture = ExtResource("1_kvucm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1266095478]
+shape = SubResource("ConvexPolygonShape2D_i1myp")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -19,10 +19,10 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("click") and self.has_overlapping_areas():
 		if sprite.frame == 0:
 			pass
-			#score -= 1
+			global_script.score -= 1
 		else:
 			pass
-			#score += 1
+			global_script.score += 1
 		position()
 	if cooldown.time_left == 0:
 		position()
