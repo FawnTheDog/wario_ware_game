@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://i2ihgiybu6m7"]
+
+[ext_resource type="Texture2D" uid="uid://bm6b4a35oq8cw" path="res://assets/main_menu.png" id="1_arvow"]
+[ext_resource type="Script" uid="uid://y2e8v4gw0m11" path="res://nodes/button.gd" id="2_urejr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arvow"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_urejr"]
+bg_color = Color(1, 1, 1, 0.14117648)
+corner_detail = 16
+
+[node name="Main menu" type="Node2D" unique_id=1840141382]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1737514576]
+position = Vector2(160, 90)
+texture = ExtResource("1_arvow")
+
+[node name="Button" type="Button" parent="." unique_id=681004776]
+offset_top = 127.0
+offset_right = 63.0
+offset_bottom = 148.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_arvow")
+theme_override_styles/hover = SubResource("StyleBoxFlat_urejr")
+script = ExtResource("2_urejr")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
