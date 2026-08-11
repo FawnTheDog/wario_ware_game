@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dbap6h4o5ykgk"]
+
+[ext_resource type="Texture2D" uid="uid://cyoty4a8p7yhj" path="res://assets/ugly_stick_guy.png" id="1_2dys8"]
+[ext_resource type="Script" uid="uid://60j80akak4p6" path="res://scripts/food_catcher.gd" id="1_aagg8"]
+[ext_resource type="Script" uid="uid://bb1m8vjjq0qtw" path="res://scripts/player.gd" id="2_6dbkc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6dbkc"]
+size = Vector2(29, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aagg8"]
+size = Vector2(20, 209)
+
+[node name="food_catcher" type="Node2D" unique_id=310336618]
+script = ExtResource("1_aagg8")
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=884749273]
+position = Vector2(160, 150)
+collision_mask = 0
+script = ExtResource("2_6dbkc")
+
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=478225571]
+texture = ExtResource("1_2dys8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=1995985063]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_6dbkc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=119147513]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1598909543]
+position = Vector2(0, 94.5)
+shape = SubResource("RectangleShape2D_aagg8")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1548676345]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1670383946]
+position = Vector2(319, 81)
+shape = SubResource("RectangleShape2D_aagg8")

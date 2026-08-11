@@ -7,6 +7,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	global_position.y += speed
+	if global_position.y > 300:
+		queue_free()
 
 
 
