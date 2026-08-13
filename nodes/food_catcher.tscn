@@ -11,6 +11,7 @@ size = Vector2(29, 31)
 size = Vector2(20, 209)
 
 [node name="food_catcher" type="Node2D" unique_id=310336618]
+z_index = -1
 script = ExtResource("1_aagg8")
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=884749273]

@@ -14,6 +14,7 @@ func position():
 	index += 1
 
 func _ready() -> void:
+	global_script.done = false
 	position()
 	print(length)
 
@@ -34,3 +35,4 @@ func _physics_process(_delta: float) -> void:
 	else:
 		if cooldown.time_left == 0:
 			queue_free()
+			global_script.done= true
