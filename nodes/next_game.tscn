@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dnd5jmg51kal7"]
 
-[ext_resource type="Script" uid="uid://dro3eana5cuay" path="res://next_game.gd" id="1_eakix"]
+[ext_resource type="Script" uid="uid://dro3eana5cuay" path="res://scripts/next_game.gd" id="1_eakix"]
 
 [node name="next_game" type="Node2D" unique_id=2115402775]
 z_index = 10

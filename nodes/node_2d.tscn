@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://nguwcfki1f8a"]
+
+[ext_resource type="Script" uid="uid://djig76poe7j10" path="res://scripts/label_2.gd" id="1_17her"]
+[ext_resource type="Script" uid="uid://bvn2m3ct6wi6e" path="res://nodes/button.gd" id="2_papbn"]
+
+[node name="Node2D" type="Node2D" unique_id=1947929493]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=338246227]
+offset_right = 323.0
+offset_bottom = 185.0
+color = Color(0, 0, 0, 0.7882353)
+
+[node name="Label" type="Label" parent="." unique_id=391558308]
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 288.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 32
+text = "You have finished!"
+
+[node name="Label2" type="Label" parent="." unique_id=2036054154]
+offset_left = 5.0
+offset_top = 65.0
+offset_right = 139.0
+offset_bottom = 88.0
+text = "You got \"\" points!"
+script = ExtResource("1_17her")
+
+[node name="Button" type="Button" parent="." unique_id=362828303]
+offset_left = 1.0
+offset_top = 95.0
+offset_right = 95.0
+offset_bottom = 126.0
+text = "Play again?"
+script = ExtResource("2_papbn")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

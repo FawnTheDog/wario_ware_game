@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bfrfrpygumwo8" path="res://scripts/main.gd" id="1_ufc4x"]
 [ext_resource type="Script" uid="uid://mdswcgr62j7h" path="res://scripts/collision_shape_2d.gd" id="2_a3ry3"]
 [ext_resource type="Script" uid="uid://bu8478a56jsat" path="res://scripts/label.gd" id="4_k8dvw"]
+[ext_resource type="PackedScene" uid="uid://nguwcfki1f8a" path="res://nodes/node_2d.tscn" id="4_y2wr3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xpfdc"]
 radius = 1.0
@@ -28,3 +29,5 @@ script = ExtResource("4_k8dvw")
 [node name="Timer" type="Timer" parent="." unique_id=1311971985]
 wait_time = 10.0
 one_shot = true
+
+[node name="Node2D" parent="." unique_id=1947929493 instance=ExtResource("4_y2wr3")]

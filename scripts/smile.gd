@@ -20,7 +20,7 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	if index != length:
+	if index != length + 1:
 		if Input.is_action_just_pressed("click") and self.has_overlapping_areas():
 			if sprite.frame == 0:
 				pass
@@ -33,6 +33,5 @@ func _physics_process(_delta: float) -> void:
 			position()
 			cooldown.start()
 	else:
-		if cooldown.time_left == 0:
-			queue_free()
-			global_script.done= true
+		queue_free()
+		global_script.done= true
