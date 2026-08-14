@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b5g4u1wk3mpem"]
+
+[ext_resource type="Texture2D" uid="uid://cn34ft5kapbxt" path="res://assets/bar_thingy.png" id="1_dau8n"]
+[ext_resource type="Texture2D" uid="uid://4kodrqv3x1e3" path="res://assets/selected_thingy.png" id="2_5yia2"]
+[ext_resource type="Script" uid="uid://y2h55rxik8su" path="res://selected.gd" id="3_1s2sx"]
+
+[node name="bar" type="Sprite2D" unique_id=395618858]
+position = Vector2(32, 19)
+texture = ExtResource("1_dau8n")
+
+[node name="selected" type="Sprite2D" parent="." unique_id=375870198]
+position = Vector2(-28, 0)
+texture = ExtResource("2_5yia2")
+script = ExtResource("3_1s2sx")
