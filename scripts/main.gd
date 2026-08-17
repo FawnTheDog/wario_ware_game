@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var timer = $Timer
 @onready var end_screen = $Node2D
-var games = [preload("res://nodes/smile.tscn"), preload("res://nodes/food_catcher.tscn")]
+var games = [preload("res://nodes/smile.tscn"), preload("res://nodes/food_catcher.tscn"), preload("res://nodes/hammer_game.tscn")]
 var next_level = preload("res://nodes/next_game.tscn")
 var chosen_game
 var game_instance
@@ -14,10 +14,11 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if global_script.done == true:
-		if games_played != 1:
+		if games_played != 5:
 			games_played += 1
-			var next_instance = next_level.instantiate()
-			add_child(next_instance)
+			if games_played != 1:
+				var next_instance = next_level.instantiate()
+				add_child(next_instance)
 			timer.start()
 			chosen_game = games.pick_random()
 			game_instance = chosen_game.instantiate()
