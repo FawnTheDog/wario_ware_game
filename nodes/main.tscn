@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bfrfrpygumwo8" path="res://scripts/main.gd" id="1_ufc4x"]
 [ext_resource type="Script" uid="uid://mdswcgr62j7h" path="res://scripts/collision_shape_2d.gd" id="2_a3ry3"]
+[ext_resource type="FontFile" uid="uid://dlhrqii6d000k" path="res://assets/Awexbmp.ttf" id="3_y2wr3"]
 [ext_resource type="Script" uid="uid://bu8478a56jsat" path="res://scripts/label.gd" id="4_k8dvw"]
 [ext_resource type="PackedScene" uid="uid://nguwcfki1f8a" path="res://nodes/node_2d.tscn" id="4_y2wr3"]
 
@@ -24,6 +25,7 @@ offset_left = 144.0
 offset_top = 4.0
 offset_right = 184.0
 offset_bottom = 27.0
+theme_override_fonts/font = ExtResource("3_y2wr3")
 script = ExtResource("4_k8dvw")
 
 [node name="Timer" type="Timer" parent="." unique_id=1311971985]

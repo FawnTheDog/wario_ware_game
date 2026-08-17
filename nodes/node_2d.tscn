@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://nguwcfki1f8a"]
 
 [ext_resource type="Script" uid="uid://djig76poe7j10" path="res://scripts/label_2.gd" id="1_17her"]
+[ext_resource type="Script" uid="uid://tul2qbisg6ab" path="res://nodes/label.gd" id="1_qscmc"]
+[ext_resource type="FontFile" uid="uid://dlhrqii6d000k" path="res://assets/Awexbmp.ttf" id="1_t4kq8"]
 [ext_resource type="Script" uid="uid://bvn2m3ct6wi6e" path="res://nodes/button.gd" id="2_papbn"]
+[ext_resource type="Texture2D" uid="uid://ck01dasuig240" path="res://assets/game_ende_smiley.png" id="4_podbc"]
 
 [node name="Node2D" type="Node2D" unique_id=1947929493]
 
@@ -15,14 +18,17 @@ offset_left = 5.0
 offset_top = 7.0
 offset_right = 288.0
 offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("1_t4kq8")
 theme_override_font_sizes/font_size = 32
 text = "You have finished!"
+script = ExtResource("1_qscmc")
 
 [node name="Label2" type="Label" parent="." unique_id=2036054154]
 offset_left = 5.0
 offset_top = 65.0
 offset_right = 139.0
 offset_bottom = 88.0
+theme_override_fonts/font = ExtResource("1_t4kq8")
 text = "You got \"\" points!"
 script = ExtResource("1_17her")
 
@@ -31,7 +37,14 @@ offset_left = 1.0
 offset_top = 95.0
 offset_right = 95.0
 offset_bottom = 126.0
+theme_override_fonts/font = ExtResource("1_t4kq8")
 text = "Play again?"
 script = ExtResource("2_papbn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1634308790]
+position = Vector2(215, 112)
+scale = Vector2(2, 2)
+texture = ExtResource("4_podbc")
+hframes = 2
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://dl7fpepjr5j3m"]
+
+[ext_resource type="Script" uid="uid://dnk1r4ds5uv8c" path="res://scripts/instructions_scene.gd" id="1_af18p"]
+[ext_resource type="FontFile" uid="uid://dlhrqii6d000k" path="res://assets/Awexbmp.ttf" id="1_hqttu"]
+
+[node name="instructions" type="Node2D" unique_id=1688209262]
+script = ExtResource("1_af18p")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1931355755]
+offset_right = 353.0
+offset_bottom = 184.0
+color = Color(0.39064297, 0.691456, 0.5984515, 1)
+
+[node name="smiley" type="Label" parent="." unique_id=1387004195]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hqttu")
+text = "In this game you must click on the green 
+faces to earn points and not click on the
+red ones. If you don't click in time, they
+dissapear. If you click a red one, you 
+lose a point, but a green one gives you a
+point."
+
+[node name="main" type="Label" parent="." unique_id=1479131229]
+visible = false
+offset_right = 354.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hqttu")
+text = "Welcome to pretty awesome minigames!
+A few things to know before you get 
+started though. First of all, each game 
+consists of five minigames, one of the
+three unique ones. To win you must get a
+score of twenty or better. Press the 
+buttons to learn more about each game."
+
+[node name="pizza" type="Label" parent="." unique_id=1935561734]
+visible = false
+offset_right = 354.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hqttu")
+text = "In this game you control a hungry 
+stickman that wants to eat the falling
+pizza. Use arrow keys to move the 
+stickman under falling pizza to eat it.
+Eating pizza gives +1 score."
+
+[node name="hammer" type="Label" parent="." unique_id=246303633]
+offset_right = 354.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hqttu")
+text = "In this game you try to get the highest 
+score by timing a click so that you get 
+the most points. The garker green  the
+more points and the more red means 
+less. The maximum points is 25, and the
+minimum if you get red is -5"
+
+[node name="original" type="Button" parent="." unique_id=918643327]
+offset_left = 27.0
+offset_top = 154.0
+offset_right = 92.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hqttu")
+text = "original"
+
+[node name="back" type="Button" parent="." unique_id=1960271530]
+offset_left = 2.0
+offset_top = 129.0
+offset_right = 47.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hqttu")
+text = "back"
+
+[node name="smiley game" type="Button" parent="." unique_id=1210316589]
+offset_left = 71.0
+offset_top = 128.0
+offset_right = 176.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hqttu")
+text = "smiley game"
+
+[node name="pizza game" type="Button" parent="." unique_id=186056610]
+offset_left = 156.0
+offset_top = 154.0
+offset_right = 251.0
+offset_bottom = 178.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hqttu")
+text = "pizza game"
+
+[node name="hammer game" type="Button" parent="." unique_id=228455948]
+offset_left = 196.0
+offset_top = 129.0
+offset_right = 314.0
+offset_bottom = 153.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hqttu")
+text = "hammer game"
+
+[connection signal="pressed" from="original" to="." method="_on_original_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="smiley game" to="." method="_on_smiley_game_pressed"]
+[connection signal="pressed" from="pizza game" to="." method="_on_pizza_game_pressed"]
+[connection signal="pressed" from="hammer game" to="." method="_on_hammer_game_pressed"]

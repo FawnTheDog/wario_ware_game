@@ -9,6 +9,11 @@
 z_index = -1
 script = ExtResource("1_m5dkh")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1160656153]
+offset_right = 332.0
+offset_bottom = 193.0
+color = Color(0.023717871, 0.77907753, 0.44234568, 1)
+
 [node name="Score2" type="Sprite2D" parent="." unique_id=900359306]
 position = Vector2(277, 86)
 texture = ExtResource("3_awko5")

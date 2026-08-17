@@ -11,6 +11,7 @@ var games_played = 0
 
 func _ready() -> void:
 	end_screen.visible = false
+	$Label.visible = true
 
 func _process(delta: float) -> void:
 	if global_script.done == true:
@@ -25,9 +26,11 @@ func _process(delta: float) -> void:
 			add_child(game_instance)
 		else:
 			end_screen.visible = true
+			$Label.visible = false
 			while not global_script.restart:
 				await get_tree().process_frame
 			games_played = 0
 			global_script.score = 0
 			global_script.restart = false
 			end_screen.visible = false
+			$Label.visible = true

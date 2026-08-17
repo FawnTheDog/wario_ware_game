@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://i2ihgiybu6m7"]
 
 [ext_resource type="Texture2D" uid="uid://bm6b4a35oq8cw" path="res://assets/main_menu.png" id="1_arvow"]
+[ext_resource type="FontFile" uid="uid://dlhrqii6d000k" path="res://assets/Awexbmp.ttf" id="2_ahhaq"]
 [ext_resource type="Script" uid="uid://y2e8v4gw0m11" path="res://scripts/button.gd" id="2_urejr"]
+[ext_resource type="Script" uid="uid://cepxwp5uvh4yc" path="res://nodes/instructions.gd" id="4_gnhuj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arvow"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -16,12 +18,35 @@ corner_detail = 16
 position = Vector2(160, 90)
 texture = ExtResource("1_arvow")
 
-[node name="Button" type="Button" parent="." unique_id=681004776]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=513815449]
 offset_top = 127.0
-offset_right = 63.0
-offset_bottom = 148.0
+offset_right = 53.0
+offset_bottom = 167.0
+color = Color(0.67058825, 0.19215687, 0.19215687, 1)
+
+[node name="Button" type="Button" parent="." unique_id=681004776]
+offset_left = 1.0
+offset_top = 116.0
+offset_right = 64.0
+offset_bottom = 137.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ahhaq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_arvow")
 theme_override_styles/hover = SubResource("StyleBoxFlat_urejr")
+text = "play"
 script = ExtResource("2_urejr")
 
+[node name="instructions" type="Button" parent="." unique_id=606308628]
+offset_left = 15.0
+offset_top = 139.0
+offset_right = 109.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ahhaq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_arvow")
+theme_override_styles/hover = SubResource("StyleBoxFlat_urejr")
+text = "instructions"
+script = ExtResource("4_gnhuj")
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="instructions" to="instructions" method="_on_pressed"]

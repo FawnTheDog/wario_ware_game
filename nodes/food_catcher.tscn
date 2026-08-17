@@ -14,6 +14,11 @@ size = Vector2(20, 209)
 z_index = -1
 script = ExtResource("1_aagg8")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1535220997]
+offset_right = 360.0
+offset_bottom = 202.0
+color = Color(0.81868774, 0.36524254, 0.6462204, 1)
+
 [node name="player" type="CharacterBody2D" parent="." unique_id=884749273]
 position = Vector2(160, 150)
 collision_mask = 0

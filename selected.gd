@@ -2,7 +2,7 @@ extends Sprite2D
 
 @export var score_curve : Curve
 var direction = 1
-var speed = 3
+var speed = 2.2
 var moving = true
 var game_over = false
 

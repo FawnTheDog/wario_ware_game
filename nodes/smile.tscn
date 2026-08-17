@@ -12,6 +12,13 @@ collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_sfrxj")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=327298695]
+offset_left = -2725.0
+offset_top = -1951.0
+offset_right = 3187.0
+offset_bottom = 2076.0
+color = Color(0.51452553, 0.039693188, 0.39616388, 1)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1309886821]
 texture = ExtResource("1_imv1n")
 hframes = 2
