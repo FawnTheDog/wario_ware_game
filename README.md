@@ -1,2 +1,2 @@
-# wario_ware_game
-Wario ware baby
+Pretty Awesome Minigames
+A warioware style game that focuses on quality play instead of fast completion.
